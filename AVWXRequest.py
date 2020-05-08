@@ -13,6 +13,7 @@ def CallMETAR(location):
     response = requests.get(url+location, headers=headers)
     return json.loads(response.text)
 
-response_json = CallMETAR('SAEZ')
-pprint.pprint(response_json)
-print(response_json['sanitized'])
+if __name__ == '__main__':
+  response_json = CallMETAR('SAEZ')
+  pprint.pprint(response_json)
+  print(response_json['sanitized'])
